@@ -1,0 +1,67 @@
+<section class="about">
+    <div class="about-header">
+        <h1>Gabriel Alejandro Ramírez Segovia</h1>
+        <h2>Full Stack Developer</h2>
+    </div>
+
+    <div class="about-content">
+        <p class="intro">
+            I am a technician specialised in web and application development, with solid experience in complex
+            technological environments and multidisciplinary teams.
+        </p>
+        <p class="about-text">
+            Throughout my career I have worked in different companies participating in migration projects, development
+            and optimization of web applications, databases and billing systems.
+        </p>
+        <p class="about-text">
+            I have been in Cork, Ireland, where I have broadened my professional skills and improved my
+            English level.
+        </p>
+        <p class="about-text">
+            I consider myself a responsible, flexible person, with high analytical and problem-solving skills, and I
+            perform effectively both individually and in a team.
+        </p>
+        <p class="about-text">
+            I am open to new technological challenges that allow me to continue to grow and add value through innovative
+            and efficient solutions.
+        </p>
+
+        <div class="highlights">
+            <div class="highlight-card">
+                <span>5+</span>
+                <p>Years of experience</p>
+            </div>
+            <div class="highlight-card">
+                <span>10+</span>
+                <p>Technologies mastered</p>
+            </div>
+        </div>
+
+        <section class="skills-section">
+            <h2 class="section-title">Languages</h2>
+            <div class="language-list">
+                <div class="language-card" *ngFor="let language of languages">
+                    <img [src]="language.icon" [alt]="language.name + ' flag'" class="language-img"
+                        *ngIf="language.icon">
+                    <div class="language-info">
+                        <h3>{{ language.name }}</h3>
+                        <p>{{ language.certification }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div *ngFor="let category of skillCategories" class="skill-category">
+                <h3>{{category.name}}</h3>
+                <div class="skills-container">
+                    <div *ngFor="let skill of category.skills" class="skill-chip">
+                        <img [src]="skill.icon" [alt]="skill.name + ' icon'" class="skill-icon" *ngIf="skill.icon">
+                        <span>{{skill.name}}</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>

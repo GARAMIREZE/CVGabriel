@@ -1,0 +1,28 @@
+<header class="navbar">
+    <!-- Menú Desktop -->
+    <nav class="desktop-menu">
+        <a routerLink="/about">About Me</a>
+        <a routerLink="/experience">Experience</a>
+        <a routerLink="/education">Education</a>
+        <a routerLink="/contact">Contact</a>
+    </nav>
+
+    <!-- Botón Hamburguesa (Móvil) -->
+    <button class="mobile-menu-button" (click)="toggleMenu()">
+        ☰
+    </button>
+
+    <!-- Menú Móvil -->
+    <nav class="mobile-menu" [class.active]="isMenuOpen">
+        <a routerLink="/about" (click)="closeMenu()">About Me</a>
+        <a routerLink="/experience" (click)="closeMenu()">Experience</a>
+        <a routerLink="/education" (click)="closeMenu()">Education</a>
+        <a routerLink="/contact" (click)="closeMenu()">Contact</a>
+    </nav>
+
+    <!-- Botón Descargar CV -->
+    <a href="GabrielA.RamirezSegovia.pdf" download class="btn-download-cv">
+        <i class="fas fa-download"></i> Descargar CV
+    </a>
+
+</header>

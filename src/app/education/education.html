@@ -1,0 +1,16 @@
+<div class="education">
+    <h1 class="title">Education</h1>
+
+    <div *ngFor="let exp of education" class="item">
+        <article class="card">
+            <div class="logo-box" *ngIf="exp.icon">
+                <img [src]="exp.icon" alt="" class="logo" loading="lazy">
+            </div>
+            <div class="info">
+                <h2 class="institution">{{exp.school}}</h2>
+                <h3 class="degree">{{exp.degree}}</h3>
+                <time class="date">{{exp.date}}</time>
+            </div>
+        </article>
+    </div>
+</div>

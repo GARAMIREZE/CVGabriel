@@ -1,0 +1,117 @@
+[
+  {
+    "company": "Apiux",
+    "role": "Analyst Programmer",
+    "date": "Currently",
+    "icon": "./comp/apiux.jpg",
+    "tech": [
+      "Java 8 - 20",
+      "Erwin",
+      "Oracle"
+    ],
+    "clients": [
+      {
+        "name": "Ayesa - Madrid Digital",
+        "description": "Supports Madrid Digital by helping build and improve online tools so people can access services more easily."
+      }
+    ]
+  },
+  {
+    "company": "Alten",
+    "role": "Programmer",
+    "date": "2022 - 2024",
+    "icon": "./comp/alten.jpg",
+    "tech": [
+      "Java 8",
+      "J2EE",
+      "Spring",
+      "JSF",
+      "SVN",
+      "Git",
+      "Jenkins",
+      "Sonar",
+      "GitLab",
+      "Hibernate",
+      "Eclipselink",
+      "JUnit5",
+      "Mockito",
+      "Oracle"
+    ],
+    "clients": [
+      {
+        "name": "Spanish Air and Space Force",
+        "description": "Migrated and developed web applications, managed Oracle databases and ran checks and tests to ensure everything worked well."
+      }
+    ]
+  },
+  {
+    "company": "Everis",
+    "role": "Solutions Assistant",
+    "date": "2018 - 2021",
+    "icon": "./comp/everis.jpg",
+    "tech": [
+      "AngularJS",
+      "Java 8",
+      "REST",
+      "SOAP",
+      "Tomcat",
+      "Oracle",
+      "PL-SQL",
+      "Unix",
+      "Shell Script",
+      "Jira"
+    ],
+    "clients": [
+      {
+        "name": "Mapfre",
+        "description": "Created and improved online tools for brokers to manage insurance policies. Worked with AngularJS, Java and REST/SOAP services, following Scrum with Jira."
+      },
+      {
+        "name": "Vodafone",
+        "description": "Helped build and maintain the billing system, designing processes and user interfaces with Oracle and Shell Scripts, working in an agile team."
+      }
+    ]
+  },
+  {
+    "company": "Japiend",
+    "role": "Junior Programmer",
+    "date": "2017",
+    "icon": "./comp/japiend.jpg",
+    "description": "Designed and built websites and small web apps with PHP, HTML, CSS and Bootstrap. Checked that they worked well and created multimedia content.",
+    "tech": [
+      "PHP",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "MySQL",
+      "PHPMyAdmin"
+    ]
+  },
+  {
+    "company": "Apps-Editor / Estrenos 21",
+    "role": "Junior Programmer",
+    "date": "2016",
+    "icon": "./comp/apps.jpg",
+    "description": "Designed and built websites, managed small databases and created and published videos and other content to keep pages fresh.",
+    "tech": [
+      "PHP",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "MySQL",
+      "PHPMyAdmin"
+    ]
+  },
+  {
+    "company": "Sermicro",
+    "role": "IT Assistant",
+    "date": "2013",
+    "icon": "./comp/sermicro.jpg",
+    "description": "Provided remote support to users, managed video calls, repaired hardware and installed software to help staff work smoothly.",
+    "tech": [
+      "Remote support",
+      "Hardware repair",
+      "Software installation"
+    ]
+  }
+]

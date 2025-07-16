@@ -1,0 +1,277 @@
+/* ===== EXPERIENCE SECTION ===== */
+.experience-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--light-bg);
+  box-shadow: var(--shadow-md);
+}
+
+.experience-section h1 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: var(--border-accent);
+}
+
+.experience-item {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.experience-item:last-child {
+  margin-bottom: 0;
+}
+
+.company-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "icon title"
+    "icon date";
+  gap: 0 1.5rem;
+  align-items: start;
+  margin-bottom: 1.5rem;
+}
+
+.company-icon {
+  grid-area: icon;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  background-color: var(--light-bg);
+  margin-top: 0.5rem;
+}
+
+.company-title {
+  grid-area: title;
+  align-self: end;
+}
+
+.company-date {
+  grid-area: date;
+  align-self: start;
+}
+
+.experience-header h2 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.experience-header h3 {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  font-weight: 500;
+  margin: 0.25rem 0 0;
+  line-height: 1.4;
+}
+
+.experience-header h3 span {
+  color: var(--text-medium);
+  font-weight: 400;
+}
+
+.experience-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.experience-date::before {
+  content: "⏳";
+  font-size: 0.9em;
+}
+
+.experience-description {
+  color: var(--text-medium);
+  line-height: 1.6;
+  margin: 1rem 0 1.5rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--accent-color);
+}
+
+.clients-section {
+  margin: 1.5rem 0;
+}
+
+.client-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "icon name"
+    "icon description";
+  gap: 0 1rem;
+  margin-bottom: 1.5rem;
+  align-items: start;
+}
+
+.client-icon {
+  grid-area: icon;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  background-color: var(--light-bg);
+  padding: 0.25rem;
+  align-self: center;
+}
+
+.client-name {
+  grid-area: name;
+  align-self: end;
+}
+
+.client-description {
+  grid-area: description;
+  color: var(--text-medium);
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0.25rem 0 0;
+}
+
+/* ===== TECH STACK IMPROVED ===== */
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.6rem;
+  margin: 1.5rem 0;
+}
+
+.tech-stack span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(74, 111, 165, 0.1);
+  color: var(--primary-color);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.tech-stack span:hover {
+  background: rgba(74, 111, 165, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Versión móvil */
+@media (max-width: 768px) {
+  .tech-stack {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .tech-stack span {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.6rem;
+  }
+}
+
+.separator {
+  height: 1px;
+  background-color: rgba(74, 111, 165, 0.1);
+  margin: 2.5rem 0;
+  border: none;
+}
+
+/* ===== MOBILE VERSION ===== */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 1.5rem;
+  }
+
+  /* Eliminar imágenes */
+  .company-icon,
+  .client-icon {
+    display: none;
+  }
+
+  /* Reestructuración sin imágenes */
+  .company-header,
+  .client-item {
+    display: block;
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+  }
+
+  /* Ajuste de tech stack */
+  .tech-stack {
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+
+  .tech-stack span {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    flex: 0 0 auto;
+    min-width: calc(50% - 0.5rem);
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  /* Ajustes de alineación */
+  .experience-header h2 {
+    margin-top: 0.5rem;
+  }
+
+  .experience-description {
+    padding-left: 0;
+    border-left: none;
+    margin: 1rem 0;
+  }
+
+  .client-description {
+    margin-left: 0;
+  }
+
+  /* Espaciado reducido */
+  .experience-item {
+    margin-bottom: 2rem;
+  }
+
+  .separator {
+    margin: 1.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Tech stack en columna única */
+  .tech-stack span {
+    min-width: 100%;
+  }
+
+  /* Ajustes tipográficos */
+  .experience-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .experience-header h3 {
+    font-size: 1rem;
+  }
+
+  .experience-date {
+    font-size: 0.85rem;
+  }
+
+  /* Mejor alineación de textos */
+  .client-item {
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,114 @@
+/* ===== EDUCATION SECTION ===== */
+.education {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--light-bg);
+    box-shadow: var(--shadow-md);
+}
+
+.title {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: var(--border-accent);
+}
+
+.item {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+.item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(74, 111, 165, 0.1);
+}
+
+.card {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.logo-box {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    padding: 0.5rem;
+    box-shadow: var(--shadow-sm);
+    margin-top: 1.5rem;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: calc(var(--border-radius) * 0.5);
+}
+
+.info {
+    flex: 1;
+}
+
+.institution {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+}
+
+.degree {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.date {
+    font-size: 0.95rem;
+    color: var(--text-medium);
+}
+
+/* ===== MOBILE VERSION ===== */
+@media (max-width: 768px) {
+    .education {
+        padding: 1.5rem;
+        margin-top: 3.5rem;
+    }
+
+    .logo-box {
+        display: none;
+    }
+
+    .card {
+        gap: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .education {
+        padding: 1rem;
+    }
+
+    .institution {
+        font-size: 1.1rem;
+    }
+
+    .degree {
+        font-size: 1rem;
+    }
+}

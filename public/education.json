@@ -1,0 +1,20 @@
+[
+  {
+    "school": "Centro de Estudios Superiores – Afuera",
+    "degree": "Higher Education Certificate in “Multiplatform Application Development”.",
+    "date": "2016 - 17",
+    "icon": "./comp/afuera.jpg"
+  },
+  {
+    "school": "Ntra. Sra. del Pilar",
+    "degree": "BackgroundHigher Education Certificate in “Web Application Development”.",
+    "date": "2014 - 16",
+    "icon": "./comp/salesianas.jpg"
+  },
+  {
+    "school": "ECFPE. Tomillo",
+    "degree": "Medium Education Certificate in “Microcomputer Systems andNetworks Technician”.",
+    "date": "2011 - 13",
+    "icon": "./comp/tomillo.png"
+  }
+]
