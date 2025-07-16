@@ -44,7 +44,8 @@
                 }
               ],
               "outputHashing": "all",
-              "outputPath": "dist/CVGabriel/browser"
+              "outputPath": "dist/CVGabriel/browser",
+              "baseHref": "/"
             },
             "development": {
               "optimization": false,
