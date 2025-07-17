@@ -1,13 +1,26 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  AfterViewInit,
+  ViewChild,
+  ElementRef,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-about',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './about.html',
   styleUrl: './about.css',
 })
-export class About {
+export class About implements OnInit, AfterViewInit {
+  @ViewChild('highlightSection') highlightSection!: ElementRef;
+
+  yearsCount = 0;
+  techsCount = 0;
+  hasAnimated = false;
+
   languages = [
     {
       name: 'Spanish',
@@ -20,6 +33,7 @@ export class About {
       icon: 'uk.svg',
     },
   ];
+
   skillCategories = [
     {
       name: 'Frontend',
@@ -93,4 +107,41 @@ export class About {
       ],
     },
   ];
+
+  ngOnInit(): void { }
+
+  ngAfterViewInit(): void {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !this.hasAnimated) {
+          this.animateCount('yearsCount', 5, 1000);
+          this.animateCount('techsCount', 10, 1000);
+          this.hasAnimated = true;
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (this.highlightSection) {
+      observer.observe(this.highlightSection.nativeElement);
+    }
+  }
+
+  animateCount(field: 'yearsCount' | 'techsCount', target: number, duration: number) {
+    const stepTime = 50;
+    const steps = Math.ceil(duration / stepTime);
+    const increment = target / steps;
+    let current = 0;
+
+    const interval = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        this[field] = target;
+        clearInterval(interval);
+      } else {
+        this[field] = Math.floor(current);
+      }
+    }, stepTime);
+  }
 }
