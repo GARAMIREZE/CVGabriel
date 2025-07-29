@@ -3,7 +3,7 @@
 
     <div class="contact-info">
         <p class="contact-description">
-            Feel free to get in touch via phone, email or the form below. I’ll respond as soon as possible.
+            Feel free to get in touch via phone, email or the form below. I'll respond as soon as possible.
         </p>
 
         <div class="details">
@@ -35,12 +35,53 @@
             </div>
         </div>
     </div>
-
     <div class="form">
-        <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfdLt-2Pj1pOTrFHDTRCfdDGZzdq8daQiUrTD-Mu1d4p5cAKg/viewform?embedded=true"
-            width="640" height="640" frameborder="0" marginheight="0" marginwidth="0" title="Contact form">
-            Loading contact form...
-        </iframe>
+        <form id="contactForm" action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name*</label>
+                <input type="text" id="name" name="name" required placeholder="Your Full Name" minlength="3">
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address*</label>
+                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="company">Company / Organisation*</label>
+                <input type="text" id="company" name="company" required placeholder="Your Company Name">
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <div class="phone-input">
+                    <select id="countryCode" name="countryCode" class="country-code">
+                        <option value="+45">Denmark (+45)</option>
+                        <option value="+358">Finland (+358)</option>
+                        <option value="+49">Germany (+49)</option>
+                        <option value="+353">Ireland (+353)</option>
+                        <option value="+31">Netherlands (+31)</option>
+                        <option value="+47">Norway (+47)</option>
+                        <option value="+34">Spain (+34)</option>
+                        <option value="+44">United Kingdom (+44)</option>
+                        <option value="other">Other (specify code)</option>
+                    </select>
+                    <input type="tel" id="phone" name="phone" placeholder="123456789">
+                </div>
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message*</label>
+                <textarea id="message" name="message" required placeholder="Your message here..."
+                    minlength="10"></textarea>
+                <span class="error-message"></span>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
     </div>
 </div>
