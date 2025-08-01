@@ -1,4 +1,5 @@
-/* ===== EXPERIENCE SECTION ===== */
+/* ===== SECCIÓN DE EXPERIENCIA ===== */
+/* Contenedor principal */
 .experience-section {
   max-width: 800px;
   margin: 2rem auto;
@@ -9,6 +10,7 @@
   box-shadow: var(--shadow-md);
 }
 
+/* Título de sección */
 .experience-section h1 {
   font-size: clamp(2rem, 5vw, 2.5rem);
   color: var(--text-dark);
@@ -17,6 +19,7 @@
   border-bottom: var(--border-accent);
 }
 
+/* Items de experiencia */
 .experience-item {
   margin-bottom: 3rem;
   position: relative;
@@ -26,6 +29,7 @@
   margin-bottom: 0;
 }
 
+/* Encabezado de compañía */
 .company-header {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -37,6 +41,7 @@
   margin-bottom: 1.5rem;
 }
 
+/* Icono de compañía */
 .company-icon {
   grid-area: icon;
   width: 60px;
@@ -48,16 +53,7 @@
   margin-top: 0.5rem;
 }
 
-.company-title {
-  grid-area: title;
-  align-self: end;
-}
-
-.company-date {
-  grid-area: date;
-  align-self: start;
-}
-
+/* Títulos de experiencia */
 .experience-header h2 {
   font-size: 1.5rem;
   color: var(--primary-color);
@@ -78,6 +74,7 @@
   font-weight: 400;
 }
 
+/* Fecha de experiencia */
 .experience-date {
   display: inline-flex;
   align-items: center;
@@ -93,14 +90,16 @@
   font-size: 0.9em;
 }
 
+/* Descripción de experiencia */
 .experience-description {
   color: var(--text-medium);
   line-height: 1.6;
   margin: 1rem 0 1.5rem;
   padding-left: 1.5rem;
-  border-left: 2px solid var(--accent-color);
+  font-size: 1rem;
 }
 
+/* ===== SECCIÓN DE CLIENTES ===== */
 .clients-section {
   margin: 1.5rem 0;
 }
@@ -141,7 +140,7 @@
   margin: 0.25rem 0 0;
 }
 
-/* ===== TECH STACK IMPROVED ===== */
+/* ===== TECNOLOGÍAS UTILIZADAS ===== */
 .tech-stack {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -169,19 +168,7 @@
   transform: translateY(-2px);
 }
 
-/* Versión móvil */
-@media (max-width: 768px) {
-  .tech-stack {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 0.5rem;
-  }
-
-  .tech-stack span {
-    font-size: 0.75rem;
-    padding: 0.35rem 0.6rem;
-  }
-}
-
+/* Separador visual */
 .separator {
   height: 1px;
   background-color: rgba(74, 111, 165, 0.1);
@@ -189,45 +176,29 @@
   border: none;
 }
 
-/* ===== MOBILE VERSION ===== */
+/* ===== DISEÑO RESPONSIVO ===== */
 @media (max-width: 768px) {
-  .about-section {
+  .experience-section {
     padding: 1.5rem;
   }
 
-  /* Eliminar imágenes */
+  .tech-stack {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.5rem;
+  }
+
+  /* Ocultar iconos en móvil */
   .company-icon,
   .client-icon {
     display: none;
   }
 
-  /* Reestructuración sin imágenes */
+  /* Reestructuración para móvil */
   .company-header,
   .client-item {
     display: block;
     grid-template-columns: 1fr;
     grid-template-areas: none;
-  }
-
-  /* Ajuste de tech stack */
-  .tech-stack {
-    justify-content: flex-start;
-    gap: 0.5rem;
-    margin: 1rem 0;
-  }
-
-  .tech-stack span {
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
-    flex: 0 0 auto;
-    min-width: calc(50% - 0.5rem);
-    text-align: center;
-    box-sizing: border-box;
-  }
-
-  /* Ajustes de alineación */
-  .experience-header h2 {
-    margin-top: 0.5rem;
   }
 
   .experience-description {
@@ -240,7 +211,6 @@
     margin-left: 0;
   }
 
-  /* Espaciado reducido */
   .experience-item {
     margin-bottom: 2rem;
   }
@@ -251,11 +221,6 @@
 }
 
 @media (max-width: 480px) {
-
-  /* Tech stack en columna única */
-  .tech-stack span {
-    min-width: 100%;
-  }
 
   /* Ajustes tipográficos */
   .experience-header h2 {
@@ -270,7 +235,6 @@
     font-size: 0.85rem;
   }
 
-  /* Mejor alineación de textos */
   .client-item {
     margin-bottom: 1rem;
   }

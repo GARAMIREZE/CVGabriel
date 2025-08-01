@@ -1,4 +1,4 @@
-/* ===== ABOUT SECTION ===== */
+/* Contenedor principal */
 .about {
   max-width: 800px;
   margin: 2rem auto;
@@ -9,6 +9,7 @@
   box-shadow: var(--shadow-md);
 }
 
+/* Encabezado */
 .about-header h1 {
   font-size: clamp(2rem, 5vw, 2.5rem);
   color: var(--text-dark);
@@ -22,6 +23,7 @@
   margin-bottom: 1.5rem;
 }
 
+/* Texto descriptivo */
 .about-text {
   color: var(--text-medium);
   margin-bottom: 1.25rem;
@@ -29,7 +31,7 @@
   text-align: justify;
 }
 
-/* ===== HIGHLIGHTS ===== */
+/* ===== DATOS DESTACADOS ===== */
 .highlights {
   display: flex;
   flex-wrap: wrap;
@@ -38,6 +40,7 @@
   gap: 1.25rem;
 }
 
+/* Tarjetas de highlights */
 .highlight-card {
   background-color: var(--light-bg);
   padding: 1.75rem;
@@ -66,23 +69,10 @@
 .highlight-card p {
   font-size: 1rem;
   margin: 0;
+  color: var(--text-medium);
 }
 
-.animated-number {
-  opacity: 0;
-  transform: translateY(10px);
-  animation: fadeUp 0.6s ease forwards;
-  animation-delay: 0.3s;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ===== SKILLS SECTION ===== */
+/* ===== SECCIÓN DE HABILIDADES ===== */
 .skills-section {
   max-width: 1200px;
   margin: 3rem auto;
@@ -93,6 +83,7 @@
   box-shadow: var(--shadow-md);
 }
 
+/* Título de sección */
 .section-title {
   font-size: clamp(1.75rem, 4vw, 2rem);
   color: var(--primary-color);
@@ -102,6 +93,7 @@
   text-align: center;
 }
 
+/* Categorías de habilidades */
 .skill-category {
   margin-bottom: 2.5rem;
 }
@@ -114,6 +106,7 @@
   text-align: center;
 }
 
+/* Contenedor de habilidades */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -122,6 +115,7 @@
   align-items: center;
 }
 
+/* Chips de habilidades */
 .skill-chip {
   display: inline-flex;
   align-items: center;
@@ -143,27 +137,14 @@
   box-shadow: var(--shadow-sm);
 }
 
+/* Iconos de habilidades */
 .skill-icon {
   width: 20px;
   height: 20px;
   margin-right: 0.5rem;
 }
 
-.animated-number {
-  opacity: 0;
-  transform: translateY(10px);
-  animation: fadeUp 0.6s ease forwards;
-  animation-delay: 0.3s;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ===== LANGUAGES SECTION ===== */
+/* ===== SECCIÓN DE IDIOMAS ===== */
 .language-list {
   display: flex;
   flex-wrap: wrap;
@@ -171,6 +152,7 @@
   gap: 1.5rem;
 }
 
+/* Tarjetas de idiomas */
 .language-card {
   display: flex;
   align-items: center;
@@ -189,6 +171,7 @@
   box-shadow: var(--shadow-md);
 }
 
+/* Imágenes de banderas */
 .language-img {
   width: 50px;
   height: 38px;
@@ -197,6 +180,7 @@
   border-radius: 4px;
 }
 
+/* Información de idiomas */
 .language-info h3 {
   margin: 0 0 0.5rem 0;
   font-size: 1.3rem;
@@ -209,7 +193,7 @@
   font-size: 1rem;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== DISEÑO RESPONSIVO ===== */
 @media (max-width: 768px) {
 
   .about,

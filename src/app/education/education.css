@@ -1,4 +1,4 @@
-/* ===== EDUCATION SECTION ===== */
+/* Contenedor principal */
 .education {
     max-width: 800px;
     margin: 2rem auto;
@@ -9,7 +9,8 @@
     box-shadow: var(--shadow-md);
 }
 
-.title {
+/* Título de sección */
+.education .title {
     font-size: clamp(2rem, 5vw, 2.5rem);
     color: var(--text-dark);
     margin-bottom: 2rem;
@@ -17,27 +18,28 @@
     border-bottom: var(--border-accent);
 }
 
-.item {
+/* Items de educación */
+.education-item {
     margin-bottom: 2.5rem;
     padding-bottom: 2rem;
     position: relative;
 }
 
-.item:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+/* Separador visual */
+.separator {
     height: 1px;
     background-color: rgba(74, 111, 165, 0.1);
+    margin: 2rem 0;
+    border: none;
 }
 
+/* Tarjeta de educación */
 .card {
     display: flex;
     gap: 1.5rem;
 }
 
+/* Contenedor de logo */
 .logo-box {
     flex-shrink: 0;
     width: 60px;
@@ -52,6 +54,7 @@
     margin-top: 1.5rem;
 }
 
+/* Logo de institución */
 .logo {
     width: 100%;
     height: auto;
@@ -59,10 +62,12 @@
     border-radius: calc(var(--border-radius) * 0.5);
 }
 
-.info {
+/* Información de educación */
+.education-info {
     flex: 1;
 }
 
+/* Estilos para textos */
 .institution {
     font-size: 1.25rem;
     color: var(--primary-color);
@@ -83,18 +88,18 @@
     color: var(--text-medium);
 }
 
-/* ===== MOBILE VERSION ===== */
+/* ===== DISEÑO RESPONSIVO ===== */
 @media (max-width: 768px) {
     .education {
         padding: 1.5rem;
-        margin-top: 3.5rem;
     }
 
+    /* Ocultar logos en móvil */
     .logo-box {
         display: none;
     }
 
-    .card {
+    .education-card {
         gap: 0;
     }
 }
@@ -104,6 +109,7 @@
         padding: 1rem;
     }
 
+    /* Ajustes tipográficos */
     .institution {
         font-size: 1.1rem;
     }
