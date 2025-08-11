@@ -6,7 +6,6 @@ import { Contact } from './contact/contact';
 
 export const routes: Routes = [
   { path: 'about', component: About },
-  { path: 'about', component: About },
   { path: 'experience', component: Experience },
   { path: 'education', component: Education },
   { path: 'contact', component: Contact },

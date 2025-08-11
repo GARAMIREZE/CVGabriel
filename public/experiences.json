@@ -5,14 +5,18 @@
     "date": "Currently",
     "icon": "./comp/apiux.jpg",
     "tech": [
-      "Java 8 - 20",
+      "Java 8",
       "Erwin",
-      "Oracle"
+      "Oracle",
+      "Jenkins",
+      "JSF",
+      "Spring Framework",
+      "Hibernate"
     ],
     "clients": [
       {
         "name": "Ayesa - Madrid Digital",
-        "description": "Supports Madrid Digital by helping build and improve online tools so people can access services more easily."
+        "description": "Helping to create and improve online tools at Madrid Digital so that officials can access services more easily."
       }
     ]
   },
@@ -40,7 +44,7 @@
     "clients": [
       {
         "name": "Spanish Air and Space Force",
-        "description": "Migrated and developed web applications, managed Oracle databases and ran checks and tests to ensure everything worked well."
+        "description": "I carried out the migration and development of web applications, managing the Oracle databases, conducting exhaustive testing to ensure optimal performance"
       }
     ]
   },
@@ -77,7 +81,7 @@
     "role": "Junior Programmer",
     "date": "2017",
     "icon": "./comp/japiend.jpg",
-    "description": "Designed and built websites and small web apps with PHP, HTML, CSS and Bootstrap. Checked that they worked well and created multimedia content.",
+    "description": "Designed and developed websites with PHP, HTML, CSS and Bootstrap, also created and published content for clients and their brands, to keep pages fresh.",
     "tech": [
       "PHP",
       "HTML",
@@ -92,7 +96,7 @@
     "role": "Junior Programmer",
     "date": "2016",
     "icon": "./comp/apps.jpg",
-    "description": "Designed and built websites, managed small databases and created and published videos and other content to keep pages fresh.",
+    "description": "Designed and built websites and small applications using their proprietary CMS with PHP, HTML, CSS and Bootstrap, finally tested their  functionality  and created multimedia content.",
     "tech": [
       "PHP",
       "HTML",

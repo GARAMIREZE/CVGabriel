@@ -16,6 +16,7 @@ export interface Academic {
   templateUrl: './education.html',
   styleUrl: './education.css'
 })
+
 export class Education {
   education: Academic[] = [];
 

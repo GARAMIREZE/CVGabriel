@@ -29,7 +29,7 @@ export class About implements OnInit, AfterViewInit {
     },
     {
       name: 'English',
-      certification: 'B2 (IELTS 2024)',
+      certification: 'B2 (IELTS)',
       icon: 'uk.svg',
     },
   ];

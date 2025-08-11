@@ -1,161 +1,71 @@
 <div class="contact">
-    <h1 class="title">Get in Touch</h1>
+  <h1 class="title">Get in Touch</h1>
 
-    <div class="contact-info">
-        <p class="contact-description">
-            I'm living in Madrid, Spain, but happy to relocate if needed. Feel free to drop me a message by phone,
-            email, or through the form below — I'll get back to you as soon as I can! </p>
+  <div class="contact-info">
+    <p class="contact-description">
+      Feel free to drop me a message by phone,
+      email, or through the form below — I'll get back to you as soon as I can!
+    </p>
 
-        <div class="details">
-            <a class="contact-link tooltip" data-tooltip="(+34) 615 175 633" aria-label="Call Gabriel Ramirez">
-                <img src="./phone.svg" alt="Phone icon" />
-                <span>Phone Number</span>
-            </a>
+    <div class="details">
+      <a class="contact-link tooltip" data-tooltip="(+34) 615 175 633" aria-label="Call Gabriel Ramirez">
+        <img src="./phone.svg" alt="Phone icon" />
+        <span>Phone Number</span>
+      </a>
 
-            <a class="contact-link tooltip" href="mailto:gabriel.ramirezsegovia@outlook.es"
-                data-tooltip="gabriel.ramirezsegovia@outlook.es" aria-label="Email Gabriel Ramirez">
-                <img src="./mail.svg" alt="Email icon" />
-                <span>Email</span>
-            </a>
-        </div>
-
-        <div class="rrss-container">
-            <h5 class="rrss-title">Find Me Online</h5>
-            <div class="rrss">
-                <a href="https://www.linkedin.com/in/gabriel-ramirez41" target="_blank" rel="noopener noreferrer"
-                    aria-label="LinkedIn profile" class="social-link tooltip" data-tooltip="Connect on LinkedIn">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
-                        alt="LinkedIn" />
-                </a>
-                <a href="https://github.com/GARAMIREZE/CVGabriel.git" target="_blank" rel="noopener noreferrer"
-                    aria-label="GitHub profile" class="social-link tooltip" data-tooltip="Check my GitHub">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-                        alt="GitHub" class="github-icon" />
-                </a>
-            </div>
-        </div>
-
-        <div class="form">
-            <form id="contactForm" action="send_email.php" method="POST">
-                <div class="form-group">
-                    <label for="name">Full Name*</label>
-                    <input type="text" id="name" name="name" required placeholder="Your Full Name" minlength="3">
-                    <span class="error-message"></span>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address*</label>
-                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-                    <span class="error-message"></span>
-                </div>
-
-                <div class="form-group">
-                    <label for="company">Company / Organisation*</label>
-                    <input type="text" id="company" name="company" required placeholder="Your Company Name">
-                    <span class="error-message"></span>
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <div class="phone-input">
-                        <select id="countryCode" name="countryCode" class="country-code">
-                            <option value="" disabled selected>Select Country Code</option>
-                            <option value="+45">Denmark (+45)</option>
-                            <option value="+358">Finland (+358)</option>
-                            <option value="+49">Germany (+49)</option>
-                            <option value="+353">Ireland (+353)</option>
-                            <option value="+31">Netherlands (+31)</option>
-                            <option value="+47">Norway (+47)</option>
-                            <option value="+34">Spain (+34)</option>
-                            <option value="+44">United Kingdom (+44)</option>
-                            <option value="other">Other (specify code)</option>
-                        </select>
-                        <input type="text" id="customCode" name="customCode" placeholder="+XX" style="display: none;">
-                        <input type="tel" id="phone" name="phone" placeholder="123456789">
-                    </div>
-                    <span class="error-message"></span>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message*</label>
-                    <textarea id="message" name="message" required placeholder="Your message here..."
-                        minlength="10"></textarea>
-                    <span class="error-message"></span>
-                </div>
-
-                <div class="form-group" id="formFeedback" style="display: none;"></div>
-
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </div>
+      <a class="contact-link tooltip" href="mailto:gabriel.ramirezsegovia@outlook.es"
+        data-tooltip="gabriel.ramirezsegovia@outlook.es" aria-label="Email Gabriel Ramirez">
+        <img src="./mail.svg" alt="Email icon" />
+        <span>Email</span>
+      </a>
     </div>
+
+    <div class="form">
+      <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+        <div class="form-group">
+          <label for="name">Full Name*</label>
+          <input type="text" id="name" required minlength="3" [(ngModel)]="formData.name" name="name" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address*</label>
+          <input type="email" id="email" required [(ngModel)]="formData.email" name="email" />
+        </div>
+
+        <div class="form-group">
+          <label for="company">Company / Organisation*</label>
+          <input type="text" id="company" required [(ngModel)]="formData.company" name="company" />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <div class="phone-input">
+            <select id="countryCode" required [(ngModel)]="formData.countryCode" name="countryCode"
+              (change)="onCountryCodeChange($event)">
+              <option value="" disabled selected>Select Country Code</option>
+              <option value="+45">Denmark (+45)</option>
+              <option value="+358">Finland (+358)</option>
+              <option value="+49">Germany (+49)</option>
+              <option value="+353">Ireland (+353)</option>
+              <option value="+31">Netherlands (+31)</option>
+              <option value="+47">Norway (+47)</option>
+              <option value="+34">Spain (+34)</option>
+              <option value="+44">United Kingdom (+44)</option>
+              <option value="other">Other (specify code)</option>
+            </select>
+            <input *ngIf="showCustomCode" type="text" id="customCode" [(ngModel)]="formData.customCode"
+              name="customCode" placeholder="+XX" required />
+            <input type="tel" id="phone" [(ngModel)]="formData.phone" name="phone" placeholder="123456789" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message*</label>
+          <textarea id="message" required minlength="10" [(ngModel)]="formData.message" name="message"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </div>
 </div>
-
-<script>
-// Manejar el selector de código de país
-document.getElementById('countryCode').addEventListener('change', function() {
-    const customCodeInput = document.getElementById('customCode');
-    if (this.value === 'other') {
-        customCodeInput.style.display = 'block';
-        customCodeInput.setAttribute('required', '');
-    } else {
-        customCodeInput.style.display = 'none';
-        customCodeInput.removeAttribute('required');
-    }
-});
-
-// Manejar el envío del formulario
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const form = e.target;
-    const submitBtn = form.querySelector('.submit-btn');
-    const feedbackDiv = document.getElementById('formFeedback');
-    
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
-    feedbackDiv.style.display = 'none';
-    
-    // Resetear mensajes de error
-    document.querySelectorAll('.error-message').forEach(el => {
-        el.textContent = '';
-    });
-    
-    fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: {
-            'Accept': 'application/json'
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            form.reset();
-            feedbackDiv.style.display = 'block';
-            feedbackDiv.innerHTML = `<div style="color: green; padding: 10px; background-color: #e6ffe6; border-radius: 5px; margin-bottom: 15px;">${data.message}</div>`;
-        } else {
-            if (data.errors) {
-                // Mostrar errores de validación
-                Object.keys(data.errors).forEach(field => {
-                    const errorElement = form.querySelector(`[name="${field}"] + .error-message`);
-                    if (errorElement) {
-                        errorElement.textContent = data.errors[field];
-                    }
-                });
-            } else {
-                feedbackDiv.style.display = 'block';
-                feedbackDiv.innerHTML = `<div style="color: red; padding: 10px; background-color: #ffe6e6; border-radius: 5px; margin-bottom: 15px;">${data.message}</div>`;
-            }
-        }
-    })
-    .catch(error => {
-        feedbackDiv.style.display = 'block';
-        feedbackDiv.innerHTML = `<div style="color: red; padding: 10px; background-color: #ffe6e6; border-radius: 5px; margin-bottom: 15px;">An error occurred. Please try again later.</div>`;
-    })
-    .finally(() => {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
-    });
-});
-</script>

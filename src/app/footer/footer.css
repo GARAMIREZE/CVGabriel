@@ -1,0 +1,110 @@
+/* footer.css */
+.site-footer {
+    background-color: var(--white);
+    color: var(--text-dark);
+    padding: 1.5rem 0;
+    margin-top: 4rem;
+    border-top: var(--border-accent);
+    font-family: inherit;
+}
+
+/* Texto descriptivo */
+.intro {
+    color: var(--text-medium);
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.footer-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.2s ease;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: -17px;
+
+}
+
+.social-links a {
+    color: var(--text-medium);
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .footer-section {
+        padding: 0.5rem 0;
+    }
+
+    .footer-links,
+    .social-links {
+        gap: 1rem;
+    }
+}
