@@ -196,7 +196,8 @@
 /* ===== DISEÑO RESPONSIVO ===== */
 @media (max-width: 768px) {
 
-  .about-text {
+  .about-text,
+  .intro {
     font-size: 1rem;
   }
 
