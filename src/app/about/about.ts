@@ -6,11 +6,14 @@ import {
   ElementRef,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateService } from '@ngx-translate/core';
+import { Button } from '../button/button';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, Button, TranslateModule],
   templateUrl: './about.html',
   styleUrl: './about.css',
 })
@@ -144,4 +147,15 @@ export class About implements OnInit, AfterViewInit {
       }
     }, stepTime);
   }
+
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+
+  }
+
+  switchLanguage(lang: string) {
+    this.translate.use(lang);
+  }
+
 }

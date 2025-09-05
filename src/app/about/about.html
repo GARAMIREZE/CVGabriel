@@ -1,54 +1,57 @@
 <section class="about">
     <div class="about-header">
-        <h1>Gabriel Alejandro Ramírez Segovia</h1>
-        <h2>Full Stack Developer</h2>
+        <h1>{{ 'ABOUT.TITLE' | translate }}</h1>
+        <h2>{{ 'ABOUT.SUBTITLE' | translate }}</h2>
+
     </div>
 
     <div class="about-content">
         <p class="intro">
-            Specialised technician in web and application development, with experience in complex technological
-            environments and multidisciplinary teams. I have participated in projects related to the migration,
-            development, and optimisation of web applications, mainly with relational databases.
+            {{ 'ABOUT.INTRO' | translate }}
         </p>
         <p class="about-text">
-            In 2024, I expanded my professional experience in Cork, Ireland, improving my English and strengthening my
-            ability to adapt to multicultural work environments. This international experience improved both my
-            technical skills and my ability to collaborate effectively with diverse teams.
+            {{ 'ABOUT.TEXT_1' | translate }}
         </p>
         <p class="about-text">
-            Known for my analytical thinking, problem-solving skills, and ability to deliver efficient and innovative
-            solutions. I thrive in both independent and collaborative roles and am always ready to take on new
-            technological challenges.
+            {{ 'ABOUT.TEXT_2' | translate }}
         </p>
 
         <div class="highlights" #highlightSection>
             <div class="highlight-card">
                 <span class="animated-number">{{ yearsCount }}+</span>
-                <p>Years of experience</p>
+                <p>{{ 'ABOUT.HIGHLIGHTS.YEARS' | translate }}</p>
             </div>
             <div class="highlight-card">
                 <span class="animated-number">{{ techsCount }}+</span>
-                <p>Technologies mastered</p>
+                <p>{{ 'ABOUT.HIGHLIGHTS.TECHS' | translate }}</p>
             </div>
         </div>
 
-
         <section class="skills-section">
-            <h2 class="section-title">Languages</h2>
+            <h2 class="section-title">{{ 'ABOUT.SECTIONS.LANGUAGES' | translate }}</h2>
             <div class="language-list">
-                <div class="language-card" *ngFor="let language of languages">
-                    <img [src]="language.icon" [alt]="language.name + ' flag'" class="language-img"
-                        *ngIf="language.icon">
+                <div class="language-card">
+                    <img src="spain.svg" alt="{{ 'ABOUT.LANGUAGES.SPANISH' | translate }} flag"
+                        class="language-img">
                     <div class="language-info">
-                        <h3>{{ language.name }}</h3>
-                        <p>{{ language.certification }}</p>
+                        <h3>{{ 'ABOUT.LANGUAGES.SPANISH' | translate }}</h3>
+                        <p>{{ 'ABOUT.LANGUAGES.SPANISH_LEVEL' | translate }}</p>
+                    </div>
+                </div>
+
+                <div class="language-card">
+                    <img src="uk.svg" alt="{{ 'ABOUT.LANGUAGES.ENGLISH' | translate }} flag"
+                        class="language-img">
+                    <div class="language-info">
+                        <h3>{{ 'ABOUT.LANGUAGES.ENGLISH' | translate }}</h3>
+                        <p>{{ 'ABOUT.LANGUAGES.ENGLISH_LEVEL' | translate }}</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="skills-section">
-            <h2 class="section-title">Technical Skills</h2>
+            <h2 class="section-title">{{ 'ABOUT.SECTIONS.TECH_SKILLS' | translate }}</h2>
             <div *ngFor="let category of skillCategories" class="skill-category">
                 <h3>{{category.name}}</h3>
                 <div class="skills-container">

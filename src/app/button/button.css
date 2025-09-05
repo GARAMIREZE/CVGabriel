@@ -1,0 +1,170 @@
+.language-switch-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.language-switch-input {
+    display: none;
+}
+
+.language-switch {
+    position: relative;
+    display: flex;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    border: 2px solid var(--white);
+}
+
+/* Fondos banderas*/
+.language-switch::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/flags/Spain.svg') left/cover no-repeat,
+        url('/flags/uk.svg') right/cover no-repeat;
+    background-size: 50% 100%;
+    background-position: left, right;
+    z-index: 1;
+}
+
+.language-switch::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            rgba(0, 0, 0, 0.1) 0%,
+            rgba(0, 0, 0, 0.1) 50%,
+            rgba(0, 0, 0, 0.1) 100%);
+    z-index: 1;
+}
+
+.language-switch-handle {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 32px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+    color: var(--text-dark);
+    border: 2px solid var(--white);
+}
+
+.language-switch-handle::before {
+    content: 'ES';
+}
+
+.language-switch-input:checked+.language-switch .language-switch-handle::before {
+    content: 'EN';
+}
+
+.language-switch-input:checked+.language-switch .language-switch-handle {
+    left: calc(100% - 36px);
+    transform: translateX(0);
+}
+
+.language-switch:hover .language-switch-handle {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.language-switch-input:checked+.language-switch:hover .language-switch-handle {
+    transform: scale(1.1);
+}
+
+.language-switch:active .language-switch-handle {
+    transform: scale(0.95);
+}
+
+.language-switch-input:focus+.language-switch {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .language-switch {
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .language-switch-handle {
+        background-color: rgba(255, 255, 255, 0.95);
+        color: var(--text-dark);
+        border-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .language-switch::after {
+        background: linear-gradient(90deg,
+                rgba(255, 255, 255, 0.1) 0%,
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(255, 255, 255, 0.1) 100%);
+    }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .language-switch {
+        width: 70px;
+        height: 35px;
+    }
+
+    .language-switch-handle {
+        width: 28px;
+        height: 28px;
+        top: 3.5px;
+        left: 3.5px;
+        font-size: 11px;
+    }
+
+    .language-switch-input:checked+.language-switch .language-switch-handle {
+        left: calc(100% - 31.5px);
+    }
+}
+
+@media (max-width: 480px) {
+    .language-switch {
+        width: 60px;
+        height: 30px;
+    }
+
+    .language-switch-handle {
+        width: 24px;
+        height: 24px;
+        top: 3px;
+        left: 3px;
+        font-size: 10px;
+    }
+
+    .language-switch-input:checked+.language-switch .language-switch-handle {
+        left: calc(100% - 27px);
+    }
+}
+
+.language-switch-handle {
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.title-container .language-button-wrapper .language-switch-container {
+    padding: 0;
+    margin: 0;
+}

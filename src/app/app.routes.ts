@@ -10,4 +10,5 @@ export const routes: Routes = [
   { path: 'education', component: Education },
   { path: 'contact', component: Contact },
   { path: '', redirectTo: '/about', pathMatch: 'full' },
+  { path: '**', redirectTo: '/about' } 
 ];

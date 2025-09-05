@@ -1,0 +1,64 @@
+{
+  "HEADER": {
+    "ABOUT": "Sobre Mí",
+    "EXPERIENCE": "Experiencia",
+    "EDUCATION": "Educación",
+    "CONTACT": "Contacto",
+    "DOWNLOAD_CV": "Descargar CV",
+    "MENU": "Menú"
+  },
+  "ABOUT": {
+    "TITLE": "Gabriel Alejandro Ramírez Segovia",
+    "SUBTITLE": "Desarrollador Full Stack",
+    "INTRO": "Técnico especializado en desarrollo web y de aplicaciones, con experiencia en entornos tecnológicos complejos y equipos multidisciplinarios. He participado en proyectos relacionados con la migración, desarrollo y optimización de aplicaciones web, principalmente con bases de datos relacionales.",
+    "TEXT_1": "En 2024, amplié mi experiencia profesional en Cork, Irlanda, mejorando mi inglés y fortaleciendo mi capacidad de adaptación a entornos laborales multiculturales. Esta experiencia internacional mejoró tanto mis habilidades técnicas como mi capacidad para colaborar efectivamente con equipos diversos.",
+    "TEXT_2": "Reconocido por mi pensamiento analítico, habilidades para resolver problemas y capacidad para ofrecer soluciones eficientes e innovadoras. Me desempeño bien tanto en roles independientes como colaborativos y siempre estoy listo para asumir nuevos desafíos tecnológicos.",
+    "HIGHLIGHTS": {
+      "YEARS": "Años de experiencia",
+      "TECHS": "Tecnologías dominadas"
+    },
+    "SECTIONS": {
+      "LANGUAGES": "Idiomas",
+      "TECH_SKILLS": "Habilidades técnicas"
+    },
+    "LANGUAGES": {
+      "SPANISH": "Español",
+      "SPANISH_LEVEL": "Nativo",
+      "ENGLISH": "Inglés",
+      "ENGLISH_LEVEL": "B2 (IELTS)"
+    }
+  },
+  "EXPERIENCE": {
+    "TITLE": "Experiencia Profesional",
+    "CLIENT": "Cliente",
+    "TECH_STACK": "Tecnologías utilizadas"
+  },
+  "EDUCATION": {
+    "TITLE": "Educación"
+  },
+  "CONTACT": {
+    "TITLE": "Ponte en Contacto",
+    "DESCRIPTION": "No dudes en enviarme un mensaje por teléfono, email o a través del siguiente formulario — ¡te responderé lo antes posible!",
+    "PHONE": "Número de Teléfono",
+    "EMAIL": "Email",
+    "FORM": {
+      "NAME": "Nombre Completo*",
+      "EMAIL": "Dirección de Email*",
+      "COMPANY": "Empresa / Organización*",
+      "PHONE": "Número de Teléfono",
+      "COUNTRY_CODE": "Seleccionar Código de País",
+      "CUSTOM_CODE": "+XX",
+      "PHONE_PLACEHOLDER": "123456789",
+      "MESSAGE": "Mensaje*",
+      "SEND": "Enviar Mensaje"
+    },
+    "TOOLTIPS": {
+      "PHONE": "(+34) 615 175 633",
+      "EMAIL": "gabriel.ramirezsegovia@outlook.es"
+    }
+  },
+  "FOOTER": {
+    "LOCATION": "Actualmente en Madrid, España, pero dispuesto a reubicarme si es necesario.",
+    "COPYRIGHT": "© {{ currentYear }} Gabriel Ramírez Segovia."
+  }
+}
